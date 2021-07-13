@@ -3,11 +3,24 @@
 <div align="center">
 
   [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
-  [![GitHub Issues](https://img.shields.io/github/issues/kylelobo/The-Documentation-Compendium.svg)](https://github.com/elvanselvano/purwadhika-final-project/issues)
-  [![GitHub Pull Requests](https://img.shields.io/github/issues-pr/kylelobo/The-Documentation-Compendium.svg)](https://github.com/elvanselvano/purwadhika-final-project/pulls)
+  ![Code Size](https://img.shields.io/github/languages/code-size/elvanselvano/purwadhika-final-project)
+  ![Contributors](https://img.shields.io/github/contributors/elvanselvano/purwadhika-final-project)
   [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 </div>
+
+---
+
+<p align="center"> This web app uses actual transaction data from 2010 to 2018 and machine learning models to predict the prices of housing in Washington, D.C., which is the capital of the United States. The transaction data contain attributes and transaction prices of residential property that respectively serve as independent variables and dependent variables for the machine learning models.
+    <br> 
+</p>
+
+## 📝 Table of Contents
+- [Problem Statement](#problem_statement)
+- [Idea / Solution](#idea)
+- [Technology Stack](#tech_stack)
+- [Authors](#authors)
+- [Acknowledgments](#acknowledgments)
 
 ## 🧐 Problem Statement <a name = "problem_statement"></a>
 The housing market is one of the most crucial components of any national economy. Hence, observations of the housing market and accurate predictions of real estate prices are helpful for real estate buyers and sellers as well as economic specialists. It is crucial for the establishment of real estate policies and can help real estate owners and agents make informative decision. However, real estate forecasting is a complicated and difficult task owing to many direct and indirect factors that inevitably influence the accuracy of predictions.
