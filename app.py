@@ -16,13 +16,16 @@ def predict(model, df):
 st.title("Washington D.C. Residential Properties Price Prediction 🏠")
 st.write(
     """
-![GitHub](https://img.shields.io/github/watchers/elvanselvano/purwadhika-final-project?style=social)
+[![GitHub](https://img.shields.io/github/watchers/elvanselvano/purwadhika-final-project?style=social)]()
 [![Status](https://img.shields.io/badge/status-active-success.svg)]() 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 """
 )
 image = Image.open("./assets/wallpaper.jpg")
 st.image(image)
+
+st.markdown("<h6 style='text-align: center; color: white;'><em>Image from wallpaperaccess.com</em></h6>", unsafe_allow_html=True)
+st.markdown('')
 
 st.markdown(
     """
