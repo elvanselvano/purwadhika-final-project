@@ -14,7 +14,7 @@ def predict(model, df):
 
 
 # app title and description
-st.title("Washington D.C. Residential Properties Price Prediction")
+st.title("Washington D.C. Residential Properties Price Prediction 🏠")
 
 image = Image.open("./assets/wallpaper.jpg")
 st.image(image)
@@ -22,7 +22,7 @@ st.image(image)
 st.markdown(
     """
 This is a web app to predict the price of a residential property based on\
-        several features that you can see in the sidebar. Please adjust the\
+        the features that you can see in the sidebar. Please adjust the\
         value of each feature. After that, click on the **Predict** button to\
         see the prediction of the machine learning model.
 
@@ -175,7 +175,7 @@ st.dataframe(features_df)
 # predict button
 if st.button("Predict"):
     prediction = predict(model, features_df)
-    st.write(
+    st.success(
         "Based on the features, the price of the property is $"
         + str(int(prediction))
         + "."
