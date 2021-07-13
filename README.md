@@ -1,4 +1,4 @@
-<h3 align="center">Purwadhika Final Project</h3>
+<h3 align="center">Washington D.C. Residential Properties Price Prediction 🏠</h3>
 
 <div align="center">
 
