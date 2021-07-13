@@ -11,10 +11,6 @@
 
 ---
 
-<p align="center"> This web app uses actual transaction data from 2010 to 2018 and machine learning models to predict the prices of housing in Washington, D.C., which is the capital of the United States. The transaction data contain attributes and transaction prices of residential property that respectively serve as independent variables and dependent variables for the machine learning models.
-    <br> 
-</p>
-
 ## 📝 Table of Contents
 - [Problem Statement](#problem_statement)
 - [Idea / Solution](#idea)
