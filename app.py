@@ -18,7 +18,7 @@ st.write(
     """
 [![GitHub](https://img.shields.io/github/watchers/elvanselvano/purwadhika-final-project?style=social)](https://github.com/elvanselvano/purwadhika-final-project)
 [![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/elvanselvano/purwadhika-final-project) 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/elvanselvano/purwadhika-final-project/blob/main/LICENSE)
 """
 )
 image = Image.open("./assets/wallpaper.jpg")
