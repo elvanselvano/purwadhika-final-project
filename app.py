@@ -16,8 +16,8 @@ def predict(model, df):
 st.title("Washington D.C. Residential Properties Price Prediction 🏠")
 st.write(
     """
-[![GitHub](https://img.shields.io/github/watchers/elvanselvano/purwadhika-final-project?style=social)]()
-[![Status](https://img.shields.io/badge/status-active-success.svg)]() 
+[![GitHub](https://img.shields.io/github/watchers/elvanselvano/purwadhika-final-project?style=social)](https://github.com/elvanselvano/purwadhika-final-project)
+[![Status](https://img.shields.io/badge/status-active-success.svg)](https://github.com/elvanselvano/purwadhika-final-project) 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 """
 )
