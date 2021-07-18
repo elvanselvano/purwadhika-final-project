@@ -168,7 +168,7 @@ if st.button("Predict"):
 
     for percent_complete in range(100):
         time.sleep(0.1)
-        my_bar.progress(percent_complete + 1)
+        my_bar.progress(percent_complete + 2)
 
     model = load_model("catboost_final")
     lower, predicted_price, upper = predict(model, features_df)
