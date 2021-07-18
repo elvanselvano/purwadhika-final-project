@@ -34,7 +34,7 @@ The housing market is one of the most crucial components of any national economy
 
 ## 💡 Idea / Solution <a name = "idea"></a>
 
-The main idea of this project is to employ actual transaction data and machine learning models to predict prices of housing in Washington, D.C., which is the capital of the United States. The actual transaction data needs to have the attributes and transaction prices of the real estate that respectively serve as independent variables and dependent variables for machine learning models.
+The main idea is to train a regression model using historical transactions. The output of this model is the predicted price of a house given its features. It will also give the range of price by 95% predictions interval which means given a prediction of ‘y’ given ‘x’, there is a 95% likelihood that the range ‘a’ to ‘b’ covers the true outcome. In order to measure the performance of the model, we focus on Mean Absolute Error (MAE) because it is robust to outliers.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -52,7 +52,7 @@ streamlit
 ```
 
 ### Running
-In order to run a [streamlit](https://streamlit.io/) app, all you need to do is write the following command. That’s it! In the next few seconds the app will open in a new tab in your default browser.
+In order to run a [streamlit](https://streamlit.io/) app, all you need to do is write the following command.
 
 ```
 streamlit run app.py
