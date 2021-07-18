@@ -1,10 +1,9 @@
-from pycaret.regression import load_model, predict_model
+from pycaret.regression import load_model, predict_model, interpret_model
 from PIL import Image
 import streamlit as st
 import pandas as pd
 import numpy as np
 import time
-import shap
 import streamlit.components.v1 as components
 
 # predict the price of a residential property
@@ -210,23 +209,25 @@ if st.button("Predict"):
             + "."
         )
 
-    explainer = shap.TreeExplainer(model)
-    shap_values = explainer.shap_values(features_df)
 
-    # visualize the first prediction's explanation (use matplotlib=True to avoid Javascript)
-    st_shap(shap.force_plot(explainer.expected_value, shap_values, features_df), 400)
+    interpret_model(model)
+    # explainer = shap.TreeExplainer(model)
+    # shap_values = explainer.shap_values(features_df)
 
-    #summary_plot_bar
-    st_shap(shap.summary_plot(shap_values, features_df, plot_type="bar"), 400)
-    st.pyplot()
+    # # visualize the first prediction's explanation (use matplotlib=True to avoid Javascript)
+    # st_shap(shap.force_plot(explainer.expected_value, shap_values, features_df), 400)
 
-    #summary_plot
-    st_shap(shap.summary_plot(shap_values, features_df), 400)
-    st.pyplot()
+    # #summary_plot_bar
+    # st_shap(shap.summary_plot(shap_values, features_df, plot_type="bar"), 400)
+    # st.pyplot()
 
-    #dependance_plot
-    st_shap(shap.dependence_plot("LSTAT", shap_values, features_df), 400)
-    st.pyplot()
+    # #summary_plot
+    # st_shap(shap.summary_plot(shap_values, features_df), 400)
+    # st.pyplot()
+
+    # #dependance_plot
+    # st_shap(shap.dependence_plot("LSTAT", shap_values, features_df), 400)
+    # st.pyplot()
 
 st.write("---")
 # Data Section
