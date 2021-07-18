@@ -205,6 +205,7 @@ if st.button("Predict"):
             + "."
         )
 
+    interpret_model(model)
     st.write(interpret_model(model))
     # explainer = shap.TreeExplainer(model)
     # shap_values = explainer.shap_values(features_df)
