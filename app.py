@@ -3,9 +3,7 @@ from PIL import Image
 import streamlit as st
 import pandas as pd
 import numpy as np
-
-# load pretrained model
-model = load_model("catboost_final")
+import time
 
 # predict the price of a residential property
 def predict(model, df):
@@ -166,6 +164,13 @@ st.dataframe(features_df)
 
 # predict button
 if st.button("Predict"):
+    my_bar = st.progress(0)
+
+    for percent_complete in range(100):
+        time.sleep(0.1)
+        my_bar.progress(percent_complete + 1)
+
+    model = load_model("catboost_final")
     lower, predicted_price, upper = predict(model, features_df)
 
     if lower >= 100000:
