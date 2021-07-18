@@ -8,13 +8,14 @@ import time
 # predict the price of a residential property
 def predict(model, df):
     predictions_data = predict_model(estimator=model, data=df)
-    predicted_price = predictions_data['Label'][0]
+    predicted_price = predictions_data["Label"][0]
 
     # using 95% prediction intervals
     interval = 405098.68
     lower, upper = predicted_price - interval, predicted_price + interval
 
     return lower, predicted_price, upper
+
 
 # app title and description
 st.title("Washington D.C. Residential Properties Price Prediction 🏠")
@@ -28,8 +29,11 @@ st.write(
 image = Image.open("./assets/wallpaper.jpg")
 st.image(image)
 
-st.markdown("<h6 style='text-align: center; color: white;'><em>Image from wallpaperaccess.com</em></h6>", unsafe_allow_html=True)
-st.markdown('')
+st.markdown(
+    "<h6 style='text-align: center; color: white;'><em>Image from wallpaperaccess.com</em></h6>",
+    unsafe_allow_html=True,
+)
+st.markdown("")
 
 st.markdown(
     """
@@ -42,7 +46,9 @@ This web app uses actual transaction data from 2010 to 2018 and machine learning
 st.sidebar.subheader("Interior Details")
 st.sidebar.write("")
 BEDRM = st.sidebar.slider(label="Bedroom", min_value=1, max_value=6, value=3, step=1)
-BATHRM = st.sidebar.slider(label="Full Bathroom", min_value=0, max_value=6, value=2, step=1)
+BATHRM = st.sidebar.slider(
+    label="Full Bathroom", min_value=0, max_value=6, value=2, step=1
+)
 HF_BATHRM = st.sidebar.slider(
     label="Half Bathroom", min_value=0, max_value=2, value=1, step=1
 )
@@ -96,9 +102,15 @@ STRUCT = st.sidebar.selectbox(
 st.sidebar.write("---")
 st.sidebar.subheader("Property Details")
 st.sidebar.write("")
-AYB = st.sidebar.number_input(label="AYB", min_value=1914, max_value=2018, value=1935, step=1)
-EYB = st.sidebar.number_input(label="EYB", min_value=1964, max_value=2018, value=1972, step=1)
-GBA = st.sidebar.number_input(label="Gross Building Area", min_value=1204, max_value=1800, value=1577, step=1)
+AYB = st.sidebar.number_input(
+    label="AYB", min_value=1914, max_value=2018, value=1935, step=1
+)
+EYB = st.sidebar.number_input(
+    label="EYB", min_value=1964, max_value=2018, value=1972, step=1
+)
+GBA = st.sidebar.number_input(
+    label="Gross Building Area", min_value=1204, max_value=1800, value=1577, step=1
+)
 LANDAREA = st.sidebar.number_input(
     label="Land Area", min_value=1425, max_value=3460, value=2736, step=1
 )
@@ -180,14 +192,16 @@ if st.button("Predict"):
             + ". This type of house typically sold from $"
             + str(int(lower))
             + " up to $"
-            + str(int(upper)) + "."
+            + str(int(upper))
+            + "."
         )
     else:
         st.success(
             "Based on the features, the price of the property is $"
             + str(int(predicted_price))
             + ". This type of house typically sold up to $"
-            + str(int(upper)) + "."
+            + str(int(upper))
+            + "."
         )
 
 st.write("---")
