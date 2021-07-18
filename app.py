@@ -4,6 +4,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
+import shap
+import streamlit.components.v1 as components
 
 # predict the price of a residential property
 def predict(model, df):
@@ -16,6 +18,10 @@ def predict(model, df):
 
     return lower, predicted_price, upper
 
+# display feature importance using SHAP
+def st_shap(plot, height=None):
+    shap_html = f"<head>{shap.getjs()}</head><body>{plot.html()}</body>"
+    components.html(shap_html, height=height)
 
 # app title and description
 st.title("Washington D.C. Residential Properties Price Prediction 🏠")
@@ -203,6 +209,24 @@ if st.button("Predict"):
             + str(int(upper))
             + "."
         )
+
+    explainer = shap.TreeExplainer(model)
+    shap_values = explainer.shap_values(features_df)
+
+    # visualize the first prediction's explanation (use matplotlib=True to avoid Javascript)
+    st_shap(shap.force_plot(explainer.expected_value, shap_values, features_df), 400)
+
+    #summary_plot_bar
+    st_shap(shap.summary_plot(shap_values, features_df, plot_type="bar"), 400)
+    st.pyplot()
+
+    #summary_plot
+    st_shap(shap.summary_plot(shap_values, features_df), 400)
+    st.pyplot()
+
+    #dependance_plot
+    st_shap(shap.dependence_plot("LSTAT", shap_values, features_df), 400)
+    st.pyplot()
 
 st.write("---")
 # Data Section
