@@ -1,10 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
-<<<<<<< Updated upstream
  <img src="https://github.com/elvanselvano/purwadhika-final-project/blob/main/assets/wallpaper.png" alt="Project logo"></a>
-=======
- <img src="https://github.com/elvanselvano/purwadhika-final-project/blob/main/assets/wallpaper.jpg" alt="Project logo"></a>
->>>>>>> Stashed changes
 </p>
 <h3 align="center">Washington D.C. Residential Properties Price Prediction 🏠</h3>
 
@@ -20,16 +16,9 @@
 ---
 
 <p align="center"> This web app uses actual transaction data and machine learning models to predict the prices of housing in Washington, D.C., which is the capital of the United States. The transaction data contain attributes and transaction prices of residential property that respectively serve as independent variables and dependent variables for the machine learning models.
-<<<<<<< Updated upstream
     <br> 
 </p>
 
-
-=======
-    <br>
-</p>
-
->>>>>>> Stashed changes
 ## 📝 Table of Contents
 
 - [Problem Statement](#problem_statement)
@@ -48,13 +37,8 @@ The housing market is one of the most crucial components of any national economy
 The main idea of this project is to employ actual transaction data and machine learning models to predict prices of housing in Washington, D.C., which is the capital of the United States. The actual transaction data needs to have the attributes and transaction prices of the real estate that respectively serve as independent variables and dependent variables for machine learning models.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
-<<<<<<< Updated upstream
-These instructions will get you a copy of the project up and running on your local machine for development 
-=======
 
-These instructions will get you a copy of the project up and running on your local machine for development
->>>>>>> Stashed changes
-and testing purposes.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
@@ -68,22 +52,14 @@ streamlit
 ```
 
 ### Running
-
-<<<<<<< Updated upstream
 In order to run a [streamlit](https://streamlit.io/) app, all you need to do is write the following command. That’s it! In the next few seconds the app will open in a new tab in your default browser.
-=======
-In order to run a [streamlit](https://streamlit.io/) app, all you need to do is write the following command.
->>>>>>> Stashed changes
 
 ```
 streamlit run app.py
 ```
 
-<<<<<<< Updated upstream
-=======
 That’s it! In the next few seconds the app will open in a new tab in your default browser.
 
->>>>>>> Stashed changes
 ## ⛏️ Built With <a name = "tech_stack"></a>
 
 ![Deployment](https://github.com/elvanselvano/purwadhika-final-project/blob/main/assets/deployment.png)
