@@ -1,6 +1,6 @@
 <p align="center">
   <a href="" rel="noopener">
- <img src="https://github.com/elvanselvano/purwadhika-final-project/blob/main/assets/wallpaper.png" alt="Project logo"></a>
+ <img src="https://github.com/elvanselvano/purwadhika-final-project/blob/main/assets/wallpaper.jpg" alt="Project logo"></a>
 </p>
 <h3 align="center">Washington D.C. Residential Properties Price Prediction 🏠</h3>
 
@@ -15,7 +15,7 @@
 
 ---
 
-<p align="center"> This web app uses actual transaction data and machine learning models to predict the prices of housing in Washington, D.C., which is the capital of the United States. The transaction data contain attributes and transaction prices of residential property that respectively serve as independent variables and dependent variables for the machine learning models.
+<p align="center"> This web app uses actual transaction data and machine learning models to predict the prices of housing in Washington, D.C.. The transaction data contain attributes and transaction prices of residential property that respectively serve as independent variables and dependent variables for the machine learning models.
     <br> 
 </p>
 
