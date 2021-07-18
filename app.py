@@ -206,7 +206,10 @@ if st.button("Predict"):
             + "."
         )
 
-    interpret_model(model)
+    X_train_transformed= get_config('X_train')
+    shap_values = shap.TreeExplainer(model).shap_values(X_train_transformed)
+    shap.summary_plot(shap_values, X_train_transformed, plot_type="bar")
+    interpret_model(model, plot = 'summary')
     # st.write(interpret_model(model))
     # explainer = shap.TreeExplainer(model)
     # shap_values = explainer.shap_values(features_df)
