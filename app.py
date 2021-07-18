@@ -1,4 +1,5 @@
-from pycaret.regression import load_model, predict_model, interpret_model
+# from pycaret.regression import load_model, predict_model, interpret_model
+from pycaret.regression import *
 from PIL import Image
 import streamlit as st
 import pandas as pd
@@ -206,7 +207,7 @@ if st.button("Predict"):
         )
 
     interpret_model(model)
-    st.write(interpret_model(model))
+    # st.write(interpret_model(model))
     # explainer = shap.TreeExplainer(model)
     # shap_values = explainer.shap_values(features_df)
 
