@@ -150,7 +150,7 @@ def main():
 
     st.subheader("Property Information")
     st.markdown(
-        "👈  In the sidebar, there are 21 features that you can adjust. The features are shown\
+        "👈  In the sidebar, there are 23 features that you can adjust. The features are shown\
         in the table below. After you have adjusted the \
         features, click on the **Predict** button to see the prediction of the machine\
             learning model."
