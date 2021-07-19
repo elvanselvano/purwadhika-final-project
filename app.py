@@ -5,9 +5,13 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import time
-import streamlit.components.v1 as components
 
-# predict the price of a residential property
+HOUSE_EMOJI_URL = "https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/285/house_1f3e0.png"
+
+st.set_page_config(
+    page_title="Residential Price Prediction", page_icon=HOUSE_EMOJI_URL,
+)
+
 def predict(model, df):
     predictions_data = predict_model(estimator=model, data=df)
     predicted_price = predictions_data["Label"][0]
@@ -17,6 +21,7 @@ def predict(model, df):
 
 # app title and description
 def main():
+    st.markdown("<br>", unsafe_allow_html=True)
     st.title("Washington D.C. Residential Properties Price Prediction 🏠")
     st.write(
         """
@@ -25,6 +30,7 @@ def main():
     [![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/elvanselvano/purwadhika-final-project/blob/main/LICENSE)
     """
     )
+
     image = Image.open("./assets/wallpaper.jpg")
     st.image(image)
 
@@ -38,6 +44,10 @@ def main():
         """
     This web app uses actual transaction data from 2010 to 2018 and machine learning models to predict the prices of housing in Washington, D.C., which is the capital of the United States. The transaction data contain attributes and transaction prices of residential property that respectively serve as independent variables and dependent variables for the machine learning models.
     """
+    )
+
+    st.info(
+        "All data is available at [Open Data D.C.](https://opendata.dc.gov/). The residential and address point data is managed by the [Office of the Chief Technology Officer](https://octo.dc.gov/)."
     )
 
     # interior details
@@ -211,6 +221,8 @@ def main():
         "SQFT_ROOMS": SQFT_ROOMS
     }
 
+    features_df = pd.DataFrame([features])
+
     # predict button
     if st.button("Predict"):
         my_bar = st.progress(0)
@@ -224,7 +236,7 @@ def main():
 
         if lower >= 100000:
             st.success(
-                "Based on the features, the price of the property is $"
+                "✅ Based on the features, the price of the property is $"
                 + str(int(predicted_price))
                 + ". This type of house typically sold from $"
                 + str(int(lower))
@@ -234,7 +246,7 @@ def main():
             )
         else:
             st.success(
-                "Based on the features, the price of the property is $"
+                "✅ Based on the features, the price of the property is $"
                 + str(int(predicted_price))
                 + ". This type of house typically sold up to $"
                 + str(int(upper))
@@ -273,10 +285,7 @@ def main():
 
     """
     )
-    expander_bar.write("")
-    expander_bar.info(
-        "All data is available at [Open Data D.C.](https://opendata.dc.gov/). The residential and address point data is managed by the [Office of the Chief Technology Officer](https://octo.dc.gov/)."
-    )
+    expander_bar.write('')
 
 if __name__ == "__main__":
     main()
