@@ -15,7 +15,7 @@ st.set_page_config(
 def predict(model, df):
     predictions_data = predict_model(estimator=model, data=df)
     predicted_price = predictions_data["Label"][0]
-    interval = 351834.78 # using 95% prediction intervals
+    interval = 114841.78203727993
     lower, upper = predicted_price - interval, predicted_price + interval
     return lower, predicted_price, upper
 
@@ -231,7 +231,7 @@ def main():
             time.sleep(0.025)
             my_bar.progress(percent_complete + 1)
 
-        model = load_model("catboost_final")
+        model = load_model("catboost_model")
         lower, predicted_price, upper = predict(model, features_df)
 
         if lower >= 100000:
