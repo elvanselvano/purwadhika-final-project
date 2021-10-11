@@ -15,7 +15,7 @@ st.set_page_config(
 def predict(model, df):
     predictions_data = predict_model(estimator=model, data=df)
     predicted_price = predictions_data["Label"][0]
-    interval = 114841.78203727993
+    interval = 76102 / 2
     lower, upper = predicted_price - interval, predicted_price + interval
     return lower, predicted_price, upper
 
